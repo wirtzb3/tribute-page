@@ -1,0 +1,168 @@
+#main {
+	color: #658D1B;
+	font-family: "Rubik", sans-serif;
+}
+
+.container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-row-gap: 20px;
+	grid-template-areas: 
+		"header number"
+		"image image"
+		"list link"
+		"quotes quotes"
+		"ball ball";
+}
+
+.d1 {
+	grid-area: header;
+	padding-left: 10px;
+}
+
+.d2 {
+	grid-area: number;
+	border-left: 1px #1D252D solid;
+	padding-left: 10px;
+}
+
+.d3 {
+	grid-area: image;
+}
+
+.d4 {
+	grid-area: list;
+	border-right: 1px #1D252D solid;
+}
+
+.d5 {
+	grid-area: link;
+	margin: auto;
+	padding-left: 10px;
+}
+.d6 {
+	grid-area: quotes;
+	padding-left: 10px;
+}
+
+.d7 {
+	grid-area: ball;
+	margin: auto;
+}
+
+h1 {
+ text-align: left;
+ font-size: 2em;
+}
+
+h2 {
+	font-size: 1.4em;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  height: auto;
+  border: 1px #1D252D solid;
+}
+
+#img-div {
+  max-width: 100%;
+}
+
+#img-caption {
+	text-align: center;
+}
+
+.skinny-text {
+	font-weight: 300;
+}
+
+ul {
+	list-style-type: none;
+	text-align: right;
+	list-style-position: inside;
+	padding-right: 10px;
+}
+
+a {
+	color: #658D1B;
+	text-decoration: none;
+}
+
+a:hover {
+	font-size: 1.1em;
+	color: #1D252D;
+}
+
+p {
+	color: #1D252D;
+	text-align: center;
+}
+
+.quotemaster {
+	color: #658D1B;
+}
+
+/* ball just for fun!*/
+
+  #ball {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: white;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounce{
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 249px;
+      width: 130px;
+      height: 70px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+
+  @media (max-width: 600px) {
+	.container {
+		width: 100%;
+		grid-template-areas: 
+			"header number"
+			"image image"
+			"list list"
+			"link link"
+			"quotes quotes"
+			"ball ball";
+	}
+	.d4 {
+		border-right: none;
+		border-top: 1px #1D252D solid;
+	}
+	.d5 {
+		text-align: center;
+	}
+	ul {
+		text-align: left;
+	}
+	
+}
+
+
